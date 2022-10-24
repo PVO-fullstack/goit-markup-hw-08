@@ -128,6 +128,8 @@ header > .conteiner {
 }
 
 .adress.link {
+    display: flex;
+  align-items: center;
   color: var(--secondary-text-color);
 }
 
@@ -137,6 +139,7 @@ header > .conteiner {
 
 .adress-svg {
   margin-right: 10px;
+  color: currentColor;
 }
 
 .main-nav,
@@ -215,6 +218,7 @@ header > .conteiner {
   width: 270px;
   height: 120px;
   background-color: var(--section-bg-color);
+  border-radius: 4px;
 }
 
 .features.list .item + .item {
@@ -337,7 +341,8 @@ header > .conteiner {
   color: var(--icon-color);
 }
 
-.social.link:hover {
+.social.link:hover,
+.social.link:focus {
   color: var(--background-color);
   background-color: var(--links-color);
 }
@@ -369,7 +374,7 @@ header > .conteiner {
   display: flex;
 }
 
-.client.item {
+.client.link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -380,7 +385,8 @@ header > .conteiner {
   color: var(--icon-color);
 }
 
-.client.item:hover {
+.client.link:hover,
+.client.link:focus {
   color: var(--links-color);
   border-color: var(--links-color);
 }
@@ -557,6 +563,7 @@ header > .conteiner {
   color: var(--background-color);
 }
 
-.f-s {
+.link.f-s {
   background-color: rgba(255, 255, 255, 0.1);
+  color: var(--background-color);
 }
