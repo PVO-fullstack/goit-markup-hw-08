@@ -55,7 +55,7 @@
           Ефективні рішення для <br />
           вашого бізнесу
         </h1>
-        <button type="button" class="button">Замовити послугу</button>
+        <button data-modal-open type="button" class="button">Замовити послугу</button>
       </section>
 
       <!-- Особливості -->
@@ -116,29 +116,39 @@
         <div class="conteiner">
           <h2 class="work title">Чим ми займаємося</h2>
           <ul class="work list">
-            <li>
-              <img
+              <li>
+<div class="thumb">
+                <img
                 src="./images/close-up-image-programer-working-his-desk-office.jpg"
                 alt="Програміст працює на робочому місці"
                 width="370"
                 height="294"
               />
+            <p class="label">Десктопні додатки</p>
+</div>                          
             </li>
+
             <li>
-              <img
+<div class="thumb">
+                <img
                 src="./images/web-ui-designers-are-developing-application-smartphones-team-creators-is-working-interface-mobile-phones.jpg"
                 alt="Вебдизайнер розробляє інтерфейс телефону"
                 width="370"
                 height="294"
               />
+                            <p class="label">Мобільні додатки</p>
+            </div>
             </li>
             <li>
-              <img
+<div class="thumb">
+                <img
                 src="./images/creative-artist-web-design-with-working-colour-selection-graphic-tablet.jpg"
                 alt="Вебдизайнер працює з планшетом вибору кольору"
                 width="370"
                 height="294"
               />
+                                            <p class="label">Дизайнерські рішення</p>
+            </div>
             </li>
           </ul>
         </div>
@@ -519,5 +529,13 @@
         </div>
       </div>
     </footer>
+    <div data-modal class="backdrop is-hidden">
+      <div class="modal">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur saepe, quia nam hic cum eum veniam dolorum impedit voluptatibus voluptatem?
+        </p>
+        <button data-modal-close class="modal-button">Закрити</button>
+      </div>
+    </div>
+      <script src="./js/modal.js"></script>
   </body>
 </html>

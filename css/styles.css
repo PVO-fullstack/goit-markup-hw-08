@@ -92,6 +92,21 @@ header > .conteiner {
   letter-spacing: 0.02em;
 }
 
+.nav.list .item {
+  position: relative;
+}
+
+.nav.link.curent::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+content: "";
+width: 100%;
+height: 4px;
+border-radius: 2px;
+background-color: var(--links-color);
+}
+
 .logo.link,
 .logo,
 .footer-logo {
@@ -100,6 +115,10 @@ header > .conteiner {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+}
+
+.logo.link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo.link:hover,
@@ -119,6 +138,7 @@ header > .conteiner {
 
 .nav.link {
   color: var(--primary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .nav .nav.link.curent,
@@ -131,6 +151,7 @@ header > .conteiner {
     display: flex;
   align-items: center;
   color: var(--secondary-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .adress.list .item + .item {
@@ -196,6 +217,7 @@ header > .conteiner {
   padding: 10px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .button:hover,
@@ -253,6 +275,28 @@ header > .conteiner {
 .work.list {
   display: flex;
   justify-content: space-between;
+}
+
+.thumb {
+  position: relative;
+  height: 294px;
+}
+
+.label {position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 70px;
+  padding: 27px 107px;
+  font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #FFFFFF;
+background-color: rgba(47, 48, 58, 0.8);;
 }
 
 .work.title,
@@ -339,6 +383,9 @@ header > .conteiner {
   width: 44px;
   border-radius: 50%;
   color: var(--icon-color);
+  background-color: var(--background-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .social.link:hover,
@@ -352,6 +399,7 @@ header > .conteiner {
   margin: 0;
   padding: 0;
   fill: currentColor;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .social.svg:hover {
@@ -383,6 +431,8 @@ header > .conteiner {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   color: var(--icon-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .client.link:hover,
@@ -413,6 +463,12 @@ header > .conteiner {
 }
 
 .nav-button {
+  border: 0;
+  border-radius: 4px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
   font-family: 'Roboto', sans-serif;
   background-color: var(--section-bg-color);
   color: var(--primary-text-color);
@@ -421,12 +477,9 @@ header > .conteiner {
   line-height: 1.63;
   text-align: center;
   cursor: pointer;
-  border: 0;
-  border-radius: 4px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 22px;
-  padding-right: 22px;
+  transition: bacground-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-button:hover,
@@ -435,7 +488,6 @@ header > .conteiner {
   color: var(--background-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
 }
 
 .portfolio.list {
@@ -447,7 +499,7 @@ header > .conteiner {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
-  border: 1px solid #eeeeee;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio.list .item:hover {
@@ -461,6 +513,45 @@ header > .conteiner {
 
 .portfolio.list .item:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+
+.overlay {
+  position: relative;
+  overflow: hidden;  
+}
+
+.description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+line-height: 1.56;
+letter-spacing: 0.03em;
+  color: var(--background-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  /* opacity: 0; */
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+}
+
+.portfolio.list .item:hover .description {
+  /* opacity: 1; */
+  transform: translateY(0);  
+}
+
+.description.is-animated {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.portfolio-img {
+  display: block;
 }
 
 .title.project {
@@ -481,11 +572,11 @@ header > .conteiner {
 .job-name {
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  /* border-bottom: 1px solid #eeeeee;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee; */
+  border-right: 1px solid #eeeeee;
 }
 
 /* footer */
@@ -523,6 +614,7 @@ header > .conteiner {
 .footer-logo {
   color: var(--background-color);
   text-decoration: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address.list > .item {
@@ -534,6 +626,7 @@ header > .conteiner {
   padding-top: 0;
   padding-bottom: 0;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer.link:hover,
@@ -566,4 +659,41 @@ header > .conteiner {
 .link.f-s {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--background-color);
+}
+
+/* modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(42, 42, 42, 0.7);
+  opacity: 1;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  top: 50%;
+  left: 50%;  
+  width: 600px;
+  height: 400px;
+  transform: translate(-50%, -50%);
+  padding: 15px;  
+  background-color: #188ce8;
+
+
+}
+
+.modal-button {
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  background-color: green;
 }
