@@ -739,7 +739,7 @@ color: #FFFFFF;
   width: 24px;
   height: 24px;
   content: "";
-  background-image: url(./images/send.svg);
+  background-image: url(../images/send.svg);
 }
 
 /* modal */
