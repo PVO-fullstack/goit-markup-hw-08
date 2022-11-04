@@ -1,0 +1,60 @@
+.footer {
+  display: flex;
+  background-color: $hero-bg-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.conteiner {
+  @extend %--conteiner;
+}
+
+.conteiner--flex {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo__part {
+  &--wite {
+  color: $background-color;
+}
+}
+
+.address {
+  margin-top: 20px;
+}
+
+.address__item {
+  font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: $background-color;
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__list {
+    font-style: normal;
+& {@extend %--list;}
+}
+
+.address__link {
+      font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: $address-color;
+transition: $transition-color;
+&--wite {
+  color: $background-color;
+}
+& {@extend %--link;}
+&:hover,
+&:focus {
+    color: $links-color;
+}
+}
+
