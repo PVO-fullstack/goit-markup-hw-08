@@ -16,10 +16,8 @@
   justify-content: flex-start;
 }
 
-.logo__part {
-  &--wite {
+.logo__part--wite {
   color: $background-color;
-}
 }
 
 .address {
@@ -28,33 +26,32 @@
 
 .address__item {
   font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
-color: $background-color;
-}
-
-.address__item:not(:last-child) {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $background-color;
+  & :not(:last-child) {
   margin-bottom: 9px;
+}
 }
 
 .address__list {
-    font-style: normal;
-& {@extend %--list;}
+  @extend %--list;
+  font-style: normal;
 }
 
 .address__link {
-      font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
-color: $address-color;
-transition: $transition-color;
-&--wite {
-  color: $background-color;
-}
-& {@extend %--link;}
-&:hover,
-&:focus {
+  @extend %--link;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $address-color;
+  transition: $transition-color;
+  &:hover,
+  &:focus {
     color: $links-color;
-}
+  }
 }
 
+.address__link--wite {
+  color: $background-color;
+}

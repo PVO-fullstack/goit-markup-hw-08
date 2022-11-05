@@ -1,16 +1,22 @@
 .social {
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   height: 44px;
-  & {@extend %--card;}
+}
+
+.social--card {
+  margin-top: 16px;
+  margin-left: 32px;
+  margin-bottom: 30px;
+  margin-right: 32px;
 }
 
 .social__list {
-    margin: 0;
+  @extend %--list;
+  margin: 0;
   padding: 0;
   display: flex;
-  & {@extend %--list;}
 }
 
 .social__item {
@@ -26,7 +32,8 @@
 }
 
 .social__link {
-    display: flex;
+  @extend %--link;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
@@ -36,14 +43,12 @@
   border-radius: 50%;
   color: $icon-color;
   background-color: $background-color;
-  transition: $transition-color,
-    $transition-bgcolor;
-    &:hover,
-&:focus {
-  color: $background-color;
-  background-color: $links-color;
-  & {@extend %--link;}
-}
+  transition: $transition-color, $transition-bgcolor;
+  &:hover,
+  &:focus {
+    color: $background-color;
+    background-color: $links-color;
+  }
 }
 
 .social__icon {

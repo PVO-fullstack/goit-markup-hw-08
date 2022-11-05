@@ -3,8 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   background-color: $hero-bg-color;
-  background-image: linear-gradient($gradient-color, $gradient-color),
-    url(../images/hero-bg.jpg);
+  background-image: linear-gradient($gradient-color, $gradient-color), url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -13,6 +12,7 @@
 }
 
 .hero__title {
+  @extend %--title;
   background-image: none;
   background-color: transparent;
   padding-top: 0;
@@ -25,14 +25,6 @@
   text-transform: uppercase;
   color: $background-color;
 }
-
-.hero__title {
-  & {
-  @extend %--title;
-}
-}
-
-
 
 .button {
   background-color: $links-color;
@@ -51,7 +43,6 @@
   transition: $transition-bgcolor;
   &:hover,
   &:active {
-  background-color: $buttonactiv-bgcolor;
+    background-color: $buttonactiv-bgcolor;
+  }
 }
-}
-

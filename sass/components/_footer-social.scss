@@ -1,16 +1,15 @@
-.social {
-  &--end {
+.social--end {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: column;
   padding-top: 12px;
-margin: 0;
-margin-left: 70px;
-  }
+  margin: 0;
+  margin-left: 70px;
 }
 
 .social__title {
+  @extend %--title;
   margin-top: 0;
   margin-bottom: 20px;
   font-weight: 700;
@@ -19,12 +18,13 @@ margin-left: 70px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $background-color;
-  & {@extend %--title;}
 }
 
 .social__link {
-  & {@extend %--link}
-  &--color {background-color: rgba(255, 255, 255, 0.1);
-  color: $background-color;
+  @extend %--link;
 }
+
+.social__link--color {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: $background-color;
 }

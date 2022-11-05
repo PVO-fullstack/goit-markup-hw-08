@@ -1,19 +1,18 @@
-
 .logo {
-    font-family: $font-family-second;
+  @extend %--link;
+  font-family: $font-family-second;
   font-weight: 700;
-font-size: 26px;
-line-height: 1.19;
-letter-spacing: 0.03em;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
   color: $links-color;
-  & {@extend %--link;}
 }
 
 .logo__part {
-  color: $logo-color;  
+  color: $logo-color;
   transition: $transition-color;
   &:hover,
   &:focus {
-  color: $links-color;    
+    color: $links-color;
   }
 }

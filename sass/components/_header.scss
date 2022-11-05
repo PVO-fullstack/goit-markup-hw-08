@@ -1,8 +1,10 @@
+header {
+  border-bottom: 1px solid;
+  border-color: $border-color;
+}
 
 .header {
-    border-bottom: 1px solid;
-  border-color: $border-color;
-  & {@extend %--conteiner;}
+  @extend %--conteiner;
 }
 
 .header,
@@ -12,13 +14,9 @@
   justify-content: space-between;
 }
 
-.nav__item:not(:last-child) {
-  margin-right: 50px;
-}
-
 .nav__list {
-    margin-left: 93px;
-  & {@extend %--list;}
+  @extend %--list;
+  margin-left: 93px;
 }
 
 .nav,
@@ -33,9 +31,23 @@
 
 .nav__item {
   position: relative;
+  &:not(:last-child) {
+  margin-right: 50px;
+}
 }
 
-.nav__link--curent::after {
+.nav__link {
+  @extend %--link;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $primary-text-color;
+  transition: $transition-color;
+  &:hover,
+  &:focus {
+    color: $links-color;
+  }
+  &--curent::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -45,38 +57,25 @@
   border-radius: 2px;
   background-color: $links-color;
 }
-
-.nav__link {
-    display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-   color: $primary-text-color;
-  transition: $transition-color;
- & {@extend %--link;}
-  &--curent,
-  &:hover,
-  &:focus {
-  color: $links-color;    
-  }
 }
 
 .contact__link {
+  @extend %--link;
   display: flex;
   align-items: center;
-    padding-top: 25px;
+  padding-top: 25px;
   padding-bottom: 25px;
   color: $secondary-text-color;
   transition: $transition-color;
   &:hover,
   &:focus {
-  color: $links-color;
-  }
-  & {@extend %--link;}
+    color: $links-color;
+    }
 }
 
 .contact {
+  @extend %--list;
   gap: 30px;
-  & {@extend %--list;}
 }
 
 .contact__svg {
@@ -84,4 +83,3 @@
   fill: currentColor;
   transition: $fill-color;
 }
-
