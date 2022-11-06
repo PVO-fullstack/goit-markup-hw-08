@@ -29,7 +29,7 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: $background-color;
-  & :not(:last-child) {
+  &:not(:last-child) {
   margin-bottom: 9px;
 }
 }
