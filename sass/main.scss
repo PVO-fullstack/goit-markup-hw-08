@@ -1,8 +1,8 @@
-@import "utils/variables.scss";
+@import "utils/variables";
 @import "utils/placeholder";
 @import "components/body";
+@import "components/header";
 @import "components/logo";
-@import "components/header.scss";
 @import "components/hero";
 @import "components/features";
 @import "components/work";
@@ -13,4 +13,5 @@
 @import "components/footer-social";
 @import "components/subscription";
 @import "components/modal";
-@import "components/portfolio"
+@import "components/portfolio";
+@import "components/menu";

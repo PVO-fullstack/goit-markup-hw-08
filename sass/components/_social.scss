@@ -2,20 +2,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 44px;
+  // height: 44px;
 }
 
 .social--card {
   margin-top: 16px;
   margin-left: 32px;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   margin-right: 32px;
+  padding-bottom: 24px;
 }
 
 .social__list {
   @extend %--list;
   margin: 0;
   padding: 0;
+  // padding-bottom: 30px;
   display: flex;
 }
 
@@ -53,4 +55,12 @@
 
 .social__icon {
   fill: currentColor;
+}
+
+.social--end {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }

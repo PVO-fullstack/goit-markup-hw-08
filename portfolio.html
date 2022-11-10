@@ -20,45 +20,102 @@
     <!-- Шапка -->
     <header>
       <div class="header header--conteiner">
-        <nav class="nav">
-          <a class="logo Logo--link" href="./index.html">Web<span class="logo__part logo__part--hover logo__part--focus">Studio</span></a>
-          <ul class="nav__list nav__list--list">
-            <li class="nav__item"><a class="nav__link nav__link--link" href="./index.html">Студія</a></li>
-            <li class="nav__item"><a class="nav__link nav__link--link nav__link--curent nav__link--hover nav__link--focus" href="./portfolio.html">Портфоліо</a></li>
-            <li class="nav__item"><a class="nav__link nav__link--link" href="">Контакти</a></li>
+        <a class="logo logo--link" href="./index.html"
+          >Web<span class="logo__part logo__part--hover logo__part--focus">Studio</span></a
+        >
+        <batton
+          type="batton"
+          class="menu-batton"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg class="menu" width="40" height="40">
+            <use class="icon-menu" href="./images/icon.svg#menu"></use>
+            <use class="icon-close_menu" href="./images/icon.svg#close_menu"></use>
+          </svg>
+        </batton>
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav class="nav">
+            <ul class="nav__list nav__list--list">
+              <li class="nav__item">
+                <a
+                  class="nav__link nav__link--link nav__link--hover nav__link--focus"
+                  href="./index.html"
+                  >Студія</a
+                >
+              </li>
+              <li class="nav__item">
+                <a
+                  class="nav__link nav__link--link nav__link--curent nav__link--hover nav__link--focus"
+                  href="./portfolio.html"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="nav__item">
+                <a class="nav__link nav__link--link nav__link--hover nav__link--focus" href=""
+                  >Контакти</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <ul class="contact contact--list">
+            <li class="contact__item">
+              <a
+                class="contact__link contact__link--link contact__link--mail"
+                href="mailto:info@devstudio.com"
+              >
+                <svg class="contact__svg" width="16" height="16">
+                  <use href="./images/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="contact__item">
+              <a class="contact__link contact__link--link" href="tel:+380961111111">
+                <svg class="contact__svg" width="16" height="16">
+                  <use href="./images/sprite.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
           </ul>
-        </nav>
-        <ul class="contact contact--list">
-          <li class="contact__item">
-            <a class="contact__link contact__link--link" href="mailto:info@devstudio.com">
-              <svg class="contact__svg" width="16" height="16">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contact__item">
-            <a class="contact__link contact__link--link" href="tel:+380961111111">
-              <svg class="contact__svg" width="16" height="16">
-                <use href="./images/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="social--list">
+            <li><a class="social--link" href="">Instagram</a></li>
+            <li>
+              <a class="social--link" href="">Twitter</a>
+            </li>
+            <li>
+              <a class="social--link" href="">Facebook</a>
+            </li>
+            <li>
+              <a class="social--link" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
     <main>
       <section class="section">
         <div class="conteiner">
-          <h1 class="projects__title projects__title--title projects__title--visually-hidden">Portfolio</h1>
+          <h1 class="projects__title projects__title--title projects__title--visually-hidden">
+            Portfolio
+          </h1>
           <ul class="filter filter--list">
             <li class="filter__item"><button type="button" class="filter__button">Усі</button></li>
-            <li class="filter__item"><button type="button" class="filter__button">Веб-сайти</button></li>
-            <li class="filter__item"><button type="button" class="filter__button">Додатки</button></li>
-            <li class="filter__item"><button type="button" class="filter__button">Дизайн</button></li>
-            <li class="filter__item"><button type="button" class="filter__button">Маркетинг</button></li>
+            <li class="filter__item">
+              <button type="button" class="filter__button">Веб-сайти</button>
+            </li>
+            <li class="filter__item">
+              <button type="button" class="filter__button">Додатки</button>
+            </li>
+            <li class="filter__item">
+              <button type="button" class="filter__button">Дизайн</button>
+            </li>
+            <li class="filter__item">
+              <button type="button" class="filter__button">Маркетинг</button>
+            </li>
           </ul>
           <ul class="portfolio portfolio-list">
             <li class="portfolio__item">
@@ -102,7 +159,9 @@
               </div>
 
               <div class="portfolio__name">
-                <h2 class="portfolio__title portfolio__title--title">Постер New Orlean vs Golden Star</h2>
+                <h2 class="portfolio__title portfolio__title--title">
+                  Постер New Orlean vs Golden Star
+                </h2>
                 <p class="portfolio__product">Дизайн</p>
               </div>
             </li>
@@ -269,7 +328,9 @@
     <footer class="footer">
       <div class="conteiner conteiner--flex">
         <div>
-          <a class="logo logo--link" href="./">Web<span class="logo__part logo__part--wite">Studio</span></a>
+          <a class="logo logo--link" href="./"
+            >Web<span class="logo__part logo__part--wite">Studio</span></a
+          >
 
           <!-- Адреса -->
           <address class="address">
@@ -284,40 +345,64 @@
                 >
               </li>
               <li class="address__item">
-                <a class="address__link address__link--link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                <a class="address__link address__link--link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
               </li>
               <li class="address__item">
-                <a class="address__link address__link--link" href="tel:+380961111111">+38 096 111 11 11</a>
+                <a class="address__link address__link--link" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
               </li>
             </ul>
           </address>
         </div>
         <div class="social social--end">
-          <h3 class="social__title social__title--title ">Приєднуйтесь</h3>
+          <h3 class="social__title social__title--title">Приєднуйтесь</h3>
           <ul class="social__list social__list--list">
             <li class="social__item">
-              <a class="social__link social__link--link social__link--color" href="" target="_blank" rel="noopener noreferrer nofollow">
+              <a
+                class="social__link social__link--link social__link--color"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
                 <svg class="social__icon" width="20" height="20">
                   <use href="./images/sprite.svg#instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--link social__link--color" href="" target="_blank" rel="noopener noreferrer nofollow">
+              <a
+                class="social__link social__link--link social__link--color"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
                 <svg class="social__icon" width="20" height="20">
                   <use href="./images/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--link social__link--color" href="" target="_blank" rel="noopener noreferrer nofollow">
+              <a
+                class="social__link social__link--link social__link--color"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
                 <svg class="social__icon" width="20" height="20">
                   <use href="./images/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--link social__link--color" href="" target="_blank" rel="noopener noreferrer nofollow">
+              <a
+                class="social__link social__link--link social__link--color"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
                 <svg class="social__icon" width="20" height="20">
                   <use href="./images/sprite.svg#linkedin"></use>
                 </svg>
@@ -331,11 +416,18 @@
         <form class="subscription">
           <div class="subscription__field">
             <label class="subscription__label" for="email">Підпишіться на розсилку</label>
-            <input class="subscription__input" type="email" name="email" id="email" placeholder="E-mail" />
+            <input
+              class="subscription__input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+            />
             <button type="submit" class="button button__submit">Підписатися</button>
           </div>
         </form>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -1,9 +1,10 @@
 .subscription {
-  margin-left: 93px;
+  // margin-left: 93px;
+  text-align: center;
 }
 
 .subscription__field {
-  margin-top: 12px;
+  // margin-top: 12px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -20,6 +21,7 @@
   width: 358px;
   height: 50px;
   margin-top: 20px;
+  margin-bottom: 20px;
   padding-left: 16px;
   background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -44,7 +46,7 @@
 .button__submit {
   position: relative;
   width: 200px;
-  margin-left: 12px;
+  // margin-left: 12px;
   padding-left: 0;
   padding-right: 34px;
   cursor: pointer;

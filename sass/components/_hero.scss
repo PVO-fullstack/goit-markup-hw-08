@@ -1,15 +1,35 @@
 .hero {
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background-color: $hero-bg-color;
-  background-image: linear-gradient($gradient-color, $gradient-color), url(../images/hero-bg.jpg);
+  background-image: linear-gradient($gradient-color, $gradient-color), url(../images/hero-mobile@1x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: linear-gradient($gradient-color, $gradient-color), url(../images/hero-mobile@1x.jpg);  
+@media (min-device-pixel-ratio: 2), 
+(min-resolition: 2dppx) {
+    background-image: linear-gradient($gradient-color, $gradient-color), url(../images/hero-mobile@2x.jpg);
 }
+@media screen and (min-width: 768px) {
+   background-image: linear-gradient($gradient-color, $gradient-color), url(../images/hero-tablet@1x.jpg);  
+@media (min-device-pixel-ratio: 2), 
+(min-resolition: 2dppx) {
+    background-image: linear-gradient($gradient-color, $gradient-color), url(../images/hero-tablet@2x.jpg);
+} 
+}
+@media screen and (min-width: 1200px) {
+  max-width: 1600px;
+   background-image: linear-gradient($gradient-color, $gradient-color), url(../images/hero-desktop@1x.jpg);  
+@media (min-device-pixel-ratio: 2), 
+(min-resolition: 2dppx) {
+    background-image: linear-gradient($gradient-color, $gradient-color), url(../images/hero-desktop@2x.jpg);
+} 
+}
+}
+
 
 .hero__title {
   @extend %--title;
@@ -19,11 +39,11 @@
   padding-bottom: 0;
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $background-color;
+font-size: 26px;
+line-height: 1.62;
 }
 
 .button {
@@ -42,7 +62,7 @@
   cursor: pointer;
   transition: $transition-bgcolor;
   &:hover,
-  &:active {
+  &:focus {
     background-color: $buttonactiv-bgcolor;
   }
 }
