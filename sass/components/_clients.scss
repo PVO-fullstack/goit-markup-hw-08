@@ -10,14 +10,17 @@
   @extend %--title;
   font-weight: 700;
   font-size: 28px;  
-  // font-size: 36px;
   line-height: 1.18;
-  // line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: $primary-text-color;
   margin-bottom: 30px;
-  // margin-bottom: 50px;
+
+  @media screen and (min-width: 1200px) {
+  font-size: 36px;
+  line-height: 1.17;  
+  margin-bottom: 50px;      
+  }
 }
 
 .clients__list {
@@ -44,11 +47,10 @@
     color: $links-color;
     border-color: $links-color;
   }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
 }
-
-// .client__item:not(:last-child) {
-//   margin-right: 30px;
-// }
 
 .client__icon {
   fill: currentColor;

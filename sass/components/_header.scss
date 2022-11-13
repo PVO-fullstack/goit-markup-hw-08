@@ -12,48 +12,56 @@ header {
   padding-top: 16px;
   padding-bottom: 16px;
   align-items: center;
+  @media screen and (min-width: 768px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
-// .header,
-// .nav {
-//   // display: flex;
-//   // align-items: center;
-//   // justify-content: space-between;
-// }
+.header,
+.nav {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 
 .nav__list {
   @extend %--list;
-  // margin-left: 93px;
 }
 
-// .nav,
-// .nav__list,
-// .contact {
-//   // display: flex;
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   @media screen and (max-width: 767px) {
-//     font-size: 40px;
-// line-height: 1.18;
-//   }
-// }
+.nav,
+.nav__list,
+.contact {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 40px;
+  line-height: 1.18;
 
-// // .nav__item {
-//   // position: relative;
-//   // &:not(:last-child) {
-//   // margin-right: 50px;
-// // }
-// // }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+.nav__item {
+  @media screen and (min-width: 768px) {
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
 
 .nav__link {
   @extend %--link;
   @media screen and (max-width: 767px) {
-  padding: 0;
-  margin-bottom: 32px;  
-  }  
-  display: block;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+  display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
   color: $primary-text-color;
@@ -62,76 +70,91 @@ header {
   &:focus {
     color: $links-color;
   }
-//   &--curent::after {
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   content: '';
-//   width: 100%;
-//   height: 4px;
-//   border-radius: 2px;
-//   background-color: $links-color;
-// }
-}
-
-.contact--list {
-  display: flex;
-font-weight: 500;
-font-size: 34px;
-line-height: 40px;
-
+  @media screen and (min-width: 768px) {
+    &--curent::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $links-color;
+    }
   }
-
+}
 
 .contact__link {
   @extend %--link;
-  // display: flex;
   align-items: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
   color: $secondary-text-color;
   transition: $transition-color;
   &--mail {
-  font-weight: 500;
-font-size: 24px;
-line-height: 28px;
-}
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+  }
   &:hover,
   &:focus {
     color: $links-color;
-    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    font-size: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.14;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 
 .contact {
   @extend %--list;
-  gap: 30px;
+  display: flex;
   flex-direction: column-reverse;
   margin-top: 306px;
-    gap: 32px;    
+  gap: 32px;
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    margin-top: 0;
+    gap: 10px;
   }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
 
 .contact__svg {
   margin-right: 10px;
   fill: currentColor;
   transition: $fill-color;
   display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
   }
-
+}
 
 .social--list {
   display: flex;
   @extend %--list;
-    margin-top: 64px;
-    padding-bottom: 48px;
+  margin-top: 64px;
+  padding-bottom: 48px;
   gap: 20px;
-
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .social--link {
   @extend %--link;
   font-weight: 500;
-font-size: 18px;
-line-height: 1,22;
-letter-spacing: 0.02em;
-color: #2196F3;
+  font-size: 18px;
+  line-height: 1, 22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
 }

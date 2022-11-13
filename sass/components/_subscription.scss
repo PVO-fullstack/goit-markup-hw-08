@@ -1,16 +1,24 @@
 .subscription {
-  // margin-left: 93px;
   text-align: center;
 }
 
 .subscription__field {
-  // margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $background-color;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 60px;
+  }
+    @media screen and (min-width: 1200px) {
+      display: block;
+      text-align: left;
+  }
 }
 
 .subscription__label {
@@ -46,7 +54,6 @@
 .button__submit {
   position: relative;
   width: 200px;
-  // margin-left: 12px;
   padding-left: 0;
   padding-right: 34px;
   cursor: pointer;
@@ -67,5 +74,8 @@
     height: 24px;
     content: '';
     background-image: url(../images/send.svg);
+  }
+  @media screen and (min-width: 1200px) {
+      margin-left: 12px;
   }
 }

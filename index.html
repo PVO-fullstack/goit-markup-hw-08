@@ -211,9 +211,9 @@
                 />
                 <source
                   srcset="./images/igor-270.jpg 1x, ./images/igor-540.jpg 2x"
-                  media="(min-width:1200px)"
+                  media="(max-width:1600px)"
                 />
-                <img class="team__foto" src="./images/igor-450.jpg" alt="Дизайнер продукту" />
+                <img class="team__foto" src="./images/igor-270.jpg" alt="Дизайнер продукту" />
               </picture>
               <div class="team__sign">
                 <p class="team__name">Ігор Дем'яненко</p>
@@ -286,7 +286,7 @@
                   srcset="./images/olga-270.jpg 1x, ./images/olga-540.jpg 2x"
                   media="(min-width:1200px)"
                 />
-                <img class="team__foto" src="./images/olga-450.jpg" alt="Розробник інтерфейсу" />
+                <img class="team__foto" src="./images/olga-270.jpg" alt="Розробник інтерфейсу" />
               </picture>
               <div class="team__sign">
                 <p class="team__name">Ольга Рєпіна</p>
@@ -359,7 +359,7 @@
                   srcset="./images/mikola-270.jpg 1x, ./images/mikola-540.jpg 2x"
                   media="(min-width:1200px)"
                 />
-                <img class="team__foto" src="./images/mikola-450.jpg" alt="Маркетолог" />
+                <img class="team__foto" src="./images/mikola-270.jpg" alt="Маркетолог" />
               </picture>
 
               <div class="team__sign">
@@ -435,7 +435,7 @@
                 />
                 <img
                   class="team__foto"
-                  src="./images/mihailo-450.jpg"
+                  src="./images/mihailo-270.jpg"
                   alt="Дизайнер інтерфейсу користувача"
                 />
               </picture>
@@ -551,86 +551,90 @@
     <!-- Підвал сторінки -->
     <footer class="footer">
       <div class="conteiner conteiner--flex">
-        <a class="logo logo--link" href="./"
-          >Web<span class="logo__part logo__part--wite">Studio</span></a
-        >
+        <div class="footer-tablet">
+          <div>
+            <a class="logo logo--link" href="./"
+              >Web<span class="logo__part logo__part--wite">Studio</span></a
+            >
 
-        <!-- Адреса -->
-        <address class="address">
-          <ul class="address__list address__list--list">
-            <li class="address__item">
-              <a
-                class="address__link address__link--link address__link--wite"
-                href="https://goo.gl/maps/wuJxa6f8Adzccb137"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >м. Київ, пр-т Лесі Українки, 26</a
-              >
-            </li>
-            <li class="address__item">
-              <a class="address__link address__link--link" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="address__item">
-              <a class="address__link address__link--link" href="tel:+380961111111"
-                >+38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </address>
-        <div class="social social--end">
-          <h3 class="social__title social__title--title">Приєднуйтесь</h3>
-          <ul class="social__list social__list--list">
-            <li class="social__item">
-              <a
-                class="social__link social__link--link social__link--color"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/sprite.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a
-                class="social__link social__link--link social__link--color"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/sprite.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a
-                class="social__link social__link--link social__link--color"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/sprite.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a
-                class="social__link social__link--link social__link--color"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/sprite.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+            <!-- Адреса -->
+            <address class="address">
+              <ul class="address__list address__list--list">
+                <li class="address__item">
+                  <a
+                    class="address__link address__link--link address__link--wite"
+                    href="https://goo.gl/maps/wuJxa6f8Adzccb137"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a class="address__link address__link--link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a class="address__link address__link--link" href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="social social--end">
+            <h3 class="social__title social__title--title">Приєднуйтесь</h3>
+            <ul class="social__list social__list--list">
+              <li class="social__item">
+                <a
+                  class="social__link social__link--link social__link--color"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  class="social__link social__link--link social__link--color"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  class="social__link social__link--link social__link--color"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  class="social__link social__link--link social__link--color"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- form - email -->
