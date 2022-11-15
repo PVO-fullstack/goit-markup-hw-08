@@ -57,14 +57,22 @@
 .social__title {
   @extend %--title;
   padding-bottom: 20px;
+  font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #FFFFFF;
 }
 
 .social--end {
   display: flex;
   flex-direction: column;
-  color: #fff;
+    @media screen and (max-width: 767px) {
   margin-top: 60px;
   margin-bottom: 60px;
+  }  
   @media screen and (min-width: 768px) {
     align-items: center;
     margin: 0;

@@ -8,17 +8,17 @@
 }
 @media screen and (min-width: 480px) {
   .conteiner, .header {
-    width: 480px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .conteiner, .header {
-    width: 768px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .conteiner, .header {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -53,13 +53,13 @@
 }
 
 .section, .clients, .team, .work, .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 1200px) {
   .section, .clients, .team, .work, .features {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -68,6 +68,10 @@ body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
   color: #212121;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 header {
@@ -109,10 +113,14 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
+}
+
+.nav__list {
+  gap: 50px;
 }
 
 .nav,
@@ -138,9 +146,6 @@ header {
 @media screen and (min-width: 768px) {
   .nav__item {
     position: relative;
-  }
-  .nav__item:not(:last-child) {
-    margin-right: 50px;
   }
 }
 
@@ -217,7 +222,6 @@ header {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  margin-top: 306px;
   gap: 32px;
 }
 @media screen and (min-width: 768px) {
@@ -227,6 +231,7 @@ header {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-top: 0;
+    margin-left: 92px;
     gap: 10px;
   }
 }
@@ -236,6 +241,7 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin-left: 313px;
     gap: 30px;
   }
 }
@@ -309,8 +315,8 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-mobile@1x.jpg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mobile@1x.jpg);
 }
@@ -334,6 +340,8 @@ header {
 }
 @media screen and (min-width: 1200px) {
   .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
     max-width: 1600px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-desktop@1x.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-desktop@1x.jpg);
@@ -388,20 +396,15 @@ header {
   background-color: #188ce8;
 }
 
-@media screen and (min-width: 768px) {
-  .features__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 30px;
-  }
+.features__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
 }
 
-.features__item:not(:last-child) {
-  margin-bottom: 30px;
-}
 @media screen and (min-width: 768px) {
   .features__item {
     width: 354px;
@@ -520,23 +523,34 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
   .team__title {
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.17;
   }
 }
 
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
 @media screen and (min-width: 768px) {
   .team__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 30px;
     -ms-flex-preferred-size: calc((100% - 60px) / 2);
         flex-basis: calc((100% - 60px) / 2);
   }
@@ -666,6 +680,13 @@ header {
 
 .social__title {
   padding-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
 
 .social--end {
@@ -676,9 +697,12 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #fff;
-  margin-top: 60px;
-  margin-bottom: 60px;
+}
+@media screen and (max-width: 767px) {
+  .social--end {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
 @media screen and (min-width: 768px) {
   .social--end {
@@ -859,7 +883,13 @@ header {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    gap: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-tablet {
     gap: 70px;
+    margin-right: 93px;
   }
 }
 
@@ -1017,6 +1047,15 @@ header {
   z-index: 3;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+}
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding-top: 93px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 94px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -1026,27 +1065,32 @@ header {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
   min-width: 450px;
   min-height: 609px;
   border-radius: 4px;
   background: #ffffff;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.backdrop.is-hidden .modal {
-  -webkit-transform: translate(-50%, -50%) scale(1.1);
-          transform: translate(-50%, -50%) scale(1.1);
+@media screen and (min-width: 768px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .backdrop.is-hidden .modal {
+    -webkit-transform: translate(-50%, -50%) scale(1.1);
+            transform: translate(-50%, -50%) scale(1.1);
+  }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) and (min-width: 1200px) {
   .modal {
     min-width: 528px;
     min-height: 581px;
@@ -1287,16 +1331,26 @@ header {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
 @media screen and (min-width: 768px) {
   .portfolio {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -ms-flex-preferred-size: calc((100% - 30px) / 2);
         flex-basis: calc((100% - 30px) / 2);
-    gap: 30px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1421,49 +1475,56 @@ header {
 }
 
 .menu-container {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding-top: 48px;
-  padding-left: 40px;
-  width: 100%;
   background-color: #ffffff;
   font-weight: 500;
   font-size: 40px;
   line-height: 47px;
   letter-spacing: 0.02em;
-  z-index: 1;
   color: #212121;
 }
-.menu-container.is-open {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .menu-container {
-    position: static;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 48px;
+    padding-left: 40px;
+    width: 100%;
+    height: 796px;
+    z-index: 1;
+  }
+  .menu-container.is-open {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-left: 87px;
-    padding-top: 0px;
-    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .menu-container {
+    height: 100vh;
   }
 }
 @media screen and (min-width: 768px) {
   .menu-container {
-    margin-left: 93px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 87px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-container {
+    margin-left: 92px;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -27,37 +27,40 @@
 }
 
 .menu-container {
+  @media screen and (max-width: 767px) {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   padding-top: 48px;
   padding-left: 40px;
   width: 100%;
+  height: 796px;
+  z-index: 1;
+   &.is-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }  
+  }
 
   background-color: #ffffff;
   font-weight: 500;
   font-size: 40px;
   line-height: 47px;
   letter-spacing: 0.02em;
-  z-index: 1;
-
   color: #212121;
-  &.is-open {
-    display: flex;
-    flex-direction: column;
+
+    @media screen and (max-width: 767px) {
+  height: 100vh;
   }
 
   @media screen and (min-width: 768px) {
-    position: static;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-left: 87px;
-      padding-top: 0px;
-  padding-left: 0px;
   }
-    @media screen and (min-width: 768px) {
-    margin-left: 93px;
+    @media screen and (min-width: 1200px) {
+    margin-left: 92px;
   }
 }

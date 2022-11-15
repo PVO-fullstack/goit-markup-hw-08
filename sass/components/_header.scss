@@ -23,12 +23,13 @@ header {
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 }
 
 .nav__list {
   @extend %--list;
+  gap: 50px;
 }
 
 .nav,
@@ -49,9 +50,6 @@ header {
 .nav__item {
   @media screen and (min-width: 768px) {
     position: relative;
-    &:not(:last-child) {
-      margin-right: 50px;
-    }
   }
 }
 
@@ -116,15 +114,17 @@ header {
   @extend %--list;
   display: flex;
   flex-direction: column-reverse;
-  margin-top: 306px;
+  // margin-top: 306px;
   gap: 32px;
   @media screen and (min-width: 768px) {
     flex-direction: column;
     margin-top: 0;
+    margin-left: 92px;
     gap: 10px;
   }
   @media screen and (min-width: 1200px) {
     flex-direction: row;
+        margin-left: 313px;
     gap: 30px;
   }
 }

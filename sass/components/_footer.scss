@@ -72,7 +72,11 @@
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  gap: 70px;   
+  gap: 165px;   
+}
+@media screen and (min-width: 1200px) {
+  gap: 70px;
+margin-right: 93px;
 }
 }
 
